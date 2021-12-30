@@ -1,0 +1,1385 @@
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+    * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #ffffff;
+        color: #572ee5;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #572ee5;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-weight: 400;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .not-visible {
+        visibility: hidden;
+    }
+    
+    header nav .mobile-menu .mobile-menu-item a p {
+        display: none;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    input {
+        background-color: transparent;
+    }
+    
+    header {
+        position: relative;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-top: 0.31rem solid #572ee5;
+    }
+    
+    header .ppal-day-logo {
+        width: 3.05rem;
+    }
+    
+    header nav .mobile-menu {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 4.812rem;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+        overflow: hidden;
+        background-color: #572ee5;
+        opacity: 80%;
+    }
+    
+    header nav .mobile-menu .mobile-menu-item {
+        padding: 1rem;
+    }
+    
+    header nav .mobile-menu .mobile-menu-item a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 0.94rem;
+        line-height: 1.88rem;
+        text-transform: capitalize;
+        letter-spacing: 0;
+        color: #ffffff;
+    }
+    
+    header nav .mobile-menu .mobile-menu-line {
+        padding: 0;
+        width: 2.56rem;
+        height: 0.01rem;
+        background-color: #ffffff;
+    }
+    
+    header nav .burguer-btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+    
+    header nav .burguer-btn i {
+        font-size: 1rem;
+        color: #572ee5;
+    }
+    
+    header nav .mobile-menu .mobile-menu-item .create-gif-logo {
+        width: 54px;
+        height: 54px;
+    }
+    
+    main .search_gifo_section {
+        padding: 1rem 1.5rem 2.82rem 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    main .search_gifo_section .search-gifo-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.56rem;
+        line-height: 2.06rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        width: 87.465%;
+    }
+    
+    main .search_gifo_section .search-gifo-title .break-line {
+        font-size: 0;
+        display: none;
+    }
+    
+    main .search_gifo_section .search-gifo-title .color {
+        color: #5ed7c6;
+    }
+    
+    main .search_gifo_section .search-gifo-img {
+        width: 83.49%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    main .search_gifo_section .search-container {
+        width: 20.875rem;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #572ee5;
+        border-radius: 27px;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+    
+    main .search_gifo_section .search-container .search-box {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+    
+    main .search_gifo_section .search-container .search-box .search-btn,
+    main .search_gifo_section .search-container .search-box .default-search-btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+    }
+    
+    main .search_gifo_section .search-container .search-box .search-btn i {
+        color: #9cafc3;
+    }
+    
+    main .search_gifo_section .search-container .search-box .default-search-btn i {
+        color: #572ee5;
+    }
+    
+    main .search_gifo_section .search-container .search-box .search-input {
+        border: none;
+        outline: none;
+        width: 95%;
+        background-color: transparent;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    main .search_gifo_section .search-container .predictive-container {
+        width: 100%;
+    }
+    
+    main .search_gifo_section .search-container .predictive {
+        width: 100%;
+        padding: 0;
+        font-size: 1rem;
+        background-color: transparent;
+        color: #9cafc3;
+    }
+    
+    .predictive-suggestions {
+        display: flex;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        padding-top: 1rem;
+        cursor: pointer;
+    }
+    
+    .predictive-suggestions:first-child {
+        border-top: 1px solid #9cafc3;
+    }
+    
+    .predictive-suggestions:last-child {
+        margin-bottom: 1rem;
+    }
+    
+    .predictive-suggestions .predictive-text-results {
+        margin-left: 1rem;
+    }
+    
+    main .search_gifo_section .trending-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.56rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    main .search_gifo_section .trending-results-words {
+        width: 68.81%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    main .searched-gifos-section,
+    main .favorites-section,
+    main .myGifos-section,
+    main .newGifo-section {
+        padding: 1rem 1.5rem;
+        text-align: center;
+    }
+    
+    main .searched-gifos-section .searched-gifos-line {
+        width: 25%;
+        height: 0.01rem;
+        margin: 2.88rem auto;
+        background-color: #9cafc3;
+    }
+    
+    main .searched-gifos-section .area,
+    main .favorites-section .area,
+    main .myGifos-section .area {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 46%);
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2.88rem;
+    }
+    
+    main .searched-gifos-section .view-more-btn,
+    .view-more-btn {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 0.94rem;
+        line-height: 1.88rem;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        margin: 4.88rem auto;
+        padding: 1rem 2.25rem;
+        width: auto;
+        border: 1px solid #572ee5;
+        border-radius: 1.9rem;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        outline: none;
+        transition: all 0.2s ease-in;
+    }
+    
+    .area .tGifo {
+        position: relative;
+    }
+    
+    .error_msg {
+        width: 80%;
+        text-align: center;
+        margin: 5% auto;
+    }
+    
+    .error_msg img {
+        width: 9.38rem;
+        margin-bottom: 2rem;
+    }
+    
+    .err-msg {
+        width: 80%;
+        text-align: center;
+        margin: 5% auto;
+    }
+    
+    .err-msg img {
+        width: 9.38rem;
+        margin-bottom: 2rem;
+    }
+    
+    .no-results-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        text-align: center;
+        color: #5ed7c6;
+    }
+    
+    main .favorites-section .favorites-icon,
+    main .myGifos-section .myGifos-icon {
+        width: 1.44rem;
+        display: block;
+        margin: 0.5rem auto;
+    }
+    
+    main .trending-gifos-section {
+        background-color: #f3f5f8;
+        padding: 1rem 1.5rem;
+        text-align: center;
+    }
+    
+    main .trending-gifos-section .trending-gifos-title {
+        margin-top: 2rem;
+    }
+    
+    main .trending-gifos-section .description {
+        color: #000000;
+        margin-bottom: 2rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.44rem;
+    }
+    
+    main .trending-gifos-section .trending-slider-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    
+    main .trending-gifos-section .trending-slider-container .trending-slider-prev-btn,
+    main .trending-gifos-section .trending-slider-container .trending-slider-next-btn {
+        display: none;
+        cursor: pointer;
+        width: auto;
+        padding: 0.5rem 1rem;
+        color: #ffffff;
+        background-color: #572ee5;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: 0.6s ease;
+        border-radius: 3px 0 0 3px;
+        user-select: none;
+        margin: 1.5rem;
+    }
+    
+    main .trending-gifos-section .trending-slider-container .trending-slider-next-btn {
+        border-radius: 0 3px 3px 0;
+    }
+    
+    main .trending-gifos-section .trending-slider-container .trending-slider-prev-btn:hover,
+    main .trending-gifos-section .trending-slider-container .trending-slider-next-btn:hover {
+        background-color: #ffffff;
+        color: #572ee5;
+        border: 1px solid #572ee5;
+    }
+    
+    main .trending-gifos-section .trending-slider-container .trending-gifos-box {
+        width: 100%;
+        height: 11.69rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+    
+    main .trending-gifos-section .trending-slider-container .trending-gifos-box .trending-gifos-content {
+        width: 97.14rem;
+        height: 11.69rem;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    
+    main .trending-gifos-section .trending-slider-container .trending-gifos-box .trending-gifos-content .trending-gifo {
+        margin: 0 0.6759%;
+        width: 15.19rem;
+        height: 11.69rem;
+        position: relative;
+    }
+    
+    .trending-gifo {
+        position: relative;
+        width: 9.75rem;
+        height: 7.5rem;
+    }
+    
+    .trending-gifo img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .trending-gifo-img {
+        display: block;
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    .trending-hover-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: #572ee5;
+        opacity: 0;
+        z-index: 1;
+    }
+    
+    .trending-hover-container:hover {
+        opacity: 1;
+    }
+    
+    .trending-btns-container {
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 12rem;
+        opacity: 1;
+        z-index: 2;
+    }
+    
+    .trending-btns {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        margin: 0.3rem;
+        padding: 0.44rem;
+        border-radius: 7%;
+        border: none;
+        background-color: #ffffff;
+        opacity: 0.5;
+        z-index: 3;
+    }
+    
+    .trending-btns:hover {
+        opacity: 1;
+    }
+    
+    .trending-btns img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .trending-text-content {
+        position: absolute;
+        bottom: 3.19rem;
+        left: 1.16rem;
+        text-align: left;
+        color: #ffffff;
+        opacity: 1;
+        z-index: 2;
+    }
+    
+    .trending-words-link {
+        display: inline;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 0.88rem;
+        line-height: 1.56rem;
+        margin-left: 0.2rem;
+        cursor: pointer;
+        width: max-content;
+        text-align: left;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1.5rem;
+        border-bottom: 0.31rem solid #572ee5;
+    }
+    
+    main .searched-gifos-section .searched-gifos-title,
+    main .favorites-section .favorites-title,
+    main .myGifos-section .section_title,
+    main .trending-gifos-section .trending-gifos-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.88rem;
+        text-align: center;
+    }
+    
+    .step {
+        background-color: transparent;
+        border: 1px solid #572ee5;
+        color: #572ee5;
+    }
+    
+    .step-now {
+        background-color: #572ee5;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+    }
+    
+    main .newGifo-section .newGifo-layout {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    main .newGifo-section .newGifo-layout .camera {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 14%;
+        margin-left: 7%;
+    }
+    
+    main .newGifo-section .newGifo-layout .camera .cam {
+        width: 7.69rem;
+    }
+    
+    main .newGifo-section .newGifo-layout .camera .path {
+        width: 4.4rem;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 51.13%;
+        border: 1px solid #572ee5;
+        padding: 2.5%;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .box1 {
+        position: absolute;
+        border-left: 1px solid #50e3c2;
+        border-top: 1px solid #50e3c2;
+        left: 0;
+        top: 0;
+        height: 25px;
+        width: 27px;
+        margin: 15px;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .box2 {
+        position: absolute;
+        border-right: 1px solid #50e3c2;
+        border-top: 1px solid #50e3c2;
+        right: 0;
+        top: 0;
+        height: 25px;
+        width: 27px;
+        margin: 15px;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .box3 {
+        position: absolute;
+        border-left: 1px solid #50e3c2;
+        border-bottom: 1px solid #50e3c2;
+        left: 0;
+        bottom: 0;
+        height: 25px;
+        width: 27px;
+        margin: 15px;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .box4 {
+        position: absolute;
+        border-right: 1px solid #50e3c2;
+        border-bottom: 1px solid #50e3c2;
+        right: 0;
+        bottom: 0;
+        height: 25px;
+        width: 27px;
+        margin: 15px;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        height: 20rem;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .newGifo-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.88rem;
+        text-align: center;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .newGifo-title .color {
+        color: #5ed7c6;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .text {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.44rem;
+        color: #000000;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #572ee5;
+        opacity: 0.6;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .overlay .gifo-btn {
+        width: 7rem;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .overlay .overlay-video-i {
+        position: absolute;
+        top: 35%;
+        right: 33%;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .overlay .overlay-video-i .overlay-icon {
+        width: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .overlay .overlay-video-i .count-text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 0.94rem;
+        line-height: 1.38;
+        text-align: center;
+        color: #ffffff;
+    }
+    
+    main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .rec-video {
+        width: 100%;
+        height: 20rem;
+    }
+    
+    main .newGifo-section .newGifo-layout .empty {
+        width: 25%;
+    }
+    
+    main .newGifo-section .controls-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    main .newGifo-section .controls-container .empty {
+        width: 20%;
+    }
+    
+    main .newGifo-section .controls-container .controls {
+        position: relative;
+        width: 60%;
+        right: 1%;
+    }
+    
+    main .newGifo-section .controls-container .controls .upload-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 11rem;
+        margin: 0 auto;
+        padding-top: 1.5rem;
+    }
+    
+    main .newGifo-section .controls-container .controls .upload-btns .each {
+        font-family: "Roboto", sans-serif;
+        padding: 0.4rem 0.6rem;
+        font-size: 1.13rem;
+        line-height: 0.94rem;
+        border-radius: 50%;
+    }
+    
+    main .newGifo-section .controls-container .controls .upload-btns .step {
+        background-color: transparent;
+        border: 1px solid #572ee5;
+        color: #572ee5;
+    }
+    
+    main .newGifo-section .controls-container .controls .counter {
+        position: absolute;
+        top: 15%;
+        right: 8%;
+        text-align: right;
+    }
+    
+    main .newGifo-section .controls-container .controls .counter .recording {
+        text-align: right;
+    }
+    
+    main .newGifo-section .controls-container .controls .counter .counter-text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 0.94rem;
+        line-height: 1.38;
+        text-align: center;
+    }
+    
+    main .newGifo-section .controls-container .controls .counter .recording-repeat {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #572ee5;
+    }
+    
+    main .newGifo-section .controls-container .controls .upload-container {
+        width: 100%;
+        height: 0.43rem;
+        background-color: #572ee5;
+        margin: 1.5rem auto;
+    }
+    
+    main .newGifo-section .controls-container .controls .upload-btn {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 0.94rem;
+        line-height: 1.88rem;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        padding: 1rem 2.25rem;
+        width: auto;
+        border: 1px solid #572ee5;
+        border-radius: 1.9rem;
+        cursor: pointer;
+        text-align: center;
+        outline: none;
+        transition: all 0.2s ease-in;
+    }
+    
+    main .newGifo-section .controls-container .reel {
+        width: 20%;
+        margin-bottom: 5%;
+    }
+    
+    main .newGifo-section .controls-container img {
+        width: 8.88rem;
+        margin-right: 33%;
+    }
+    
+    .zoom {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        z-index: 1000;
+        padding: 6vh 2rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.9);
+        color: #000000;
+    }
+    
+    .zoom-container {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        height: 70.89%;
+        background: transparent;
+    }
+    
+    .close-zoom-btn {
+        align-self: flex-end;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .close-zoom-btn i {
+        color: #572ee5;
+        font-size: 1.5rem;
+    }
+    
+    .zoom-img {
+        width: 100%;
+        height: 24.063rem;
+        margin: 1rem auto;
+    }
+    
+    .zoom-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .zoom-text {
+        width: 70%;
+    }
+    
+    .zoom-user {
+        display: flex;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 0.94rem;
+        line-height: 1.13rem;
+    }
+    
+    .zoom-title {
+        display: flex;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.56rem;
+        text-align: left;
+    }
+    
+    .fav-btn,
+    .download-gifo-btn {
+        background-color: transparent;
+        border: 1px solid #CED7E1;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    .fav-btn {
+        margin-right: 0.5rem;
+    }
+    
+    .footer .netwoks-container {
+        width: 5.6rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12.535%;
+    }
+    
+    .footer .netwoks-container .networks-text,
+    .footer .networks-text {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 0.88rem;
+        line-height: 1.25rem;
+        color: #000000;
+    }
+    
+    .footer .networks-text {
+        text-align: center;
+    }
+    
+    .footer .netwoks-container .networks-logo-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .footer .netwoks-container .networks-logo-container a i {
+        color: #cdd6e0;
+        font-size: 1.13rem;
+    }
+    
+    .dark-mode {
+        background-color: #37383c;
+        color: #ffffff;
+    }
+    
+    .dark-mode header {
+        background-color: #37383c;
+    }
+    
+    .dark-mode header nav .mobile-menu .mobile-menu-item a,
+    .dark-mode header nav .burguer-btn i,
+    .dark-mode main .search_gifo_section .search-container .search-box .search-input,
+    .dark-mode main .search_gifo_section .search-container .search-box .search-btn i,
+    .dark-mode main .search_gifo_section .search-container .search-box .default-search-btn i,
+    .dark-mode main .trending-gifos-section .description,
+    .dark-mode .footer .netwoks-container .networks-text,
+    .dark-mode .footer .networks-text,
+    .dark-mode .footer .netwoks-container .networks-logo-container a i:hover {
+        color: #ffffff;
+    }
+    
+    .dark-mode header,
+    .dark-mode .footer,
+    .dark-mode header nav .mobile-menu,
+    .dark-mode main .trending-gifos-section {
+        border-color: #222326;
+    }
+    
+    .dark-mode main .search_gifo_section .search-container {
+        border-color: #ffffff;
+        caret-color: #ffffff;
+    }
+    
+    .dark-mode main .searched-gifos-section .view-more-btn,
+    .dark-mode .view-more-btn {
+        border-color: #ffffff;
+        color: #ffffff;
+    }
+    
+    .dark-mode main .searched-gifos-section .view-more-btn:hover,
+    .dark-mode .view-more-btn:hover {
+        background-color: #ffffff;
+        color: #37383c;
+    }
+    
+    .dark-mode main .trending-gifos-section {
+        background-color: #222326;
+    }
+    
+    .dark-mode main .trending-gifos-section .trending-slider-container .trending-slider-prev-btn,
+    .dark-mode main .trending-gifos-section .trending-slider-container .trending-slider-next-btn {
+        background-color: #ffffff;
+        color: #222326;
+    }
+    
+    .dark-mode main .trending-gifos-section .trending-slider-container .trending-slider-prev-btn:hover,
+    .dark-mode main .trending-gifos-section .trending-slider-container .trending-slider-next-btn:hover {
+        background-color: #222326;
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+    
+    .dark-mode main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .text {
+        color: #ffffff;
+    }
+    
+    .dark-mode main .newGifo-section .controls-container .controls .upload-btns .step {
+        border-color: #ffffff;
+        color: #ffffff;
+    }
+    
+    .dark-mode main .newGifo-section .controls-container .controls .upload-container .upload-btn {
+        border-color: #ffffff;
+        color: #ffffff;
+    }
+    
+    .dark-mode main .newGifo-section .controls-container .controls .upload-container .upload-btn:hover {
+        background-color: #ffffff;
+        color: #37383c;
+    }
+    
+    .dark-mode .zoom-text {
+        color: #ffffff;
+    }
+    
+    @media (min-width:768px) {
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 1rem 3rem;
+        }
+        header nav .burguer-btn {
+            display: none;
+        }
+        header .ppal-day-logo {
+            width: 3.69rem;
+        }
+        header nav .mobile-menu {
+            display: flex;
+            flex-direction: row;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            align-items: center;
+            visibility: visible;
+            background-color: transparent;
+            position: relative;
+            top: 0;
+            padding: 0;
+            width: 100%;
+            height: auto;
+        }
+        header nav .mobile-menu .mobile-menu-item {
+            padding: 0;
+            margin: 0 1rem;
+        }
+        header nav .mobile-menu .mobile-menu-item:first-child {
+            margin-left: 0;
+        }
+        header nav .mobile-menu .mobile-menu-item a {
+            color: #572ee5;
+            text-transform: uppercase;
+        }
+        header nav .mobile-menu .mobile-menu-line {
+            display: none;
+        }
+        header nav .mobile-menu {
+            padding: 0;
+            background-color: inherit;
+        }
+        header nav .mobile-menu .mobile-menu-item:hover {
+            border-bottom: 2px solid #5ed7c6;
+        }
+        header nav .mobile-menu .mobile-menu-item:last-child {
+            margin-right: 0;
+            display: block;
+        }
+        header nav .mobile-menu .mobile-menu-item:last-child:hover {
+            border-bottom: none;
+        }
+        header nav .mobile-menu .mobile-menu-item a:active {
+            color: #9cafc3;
+        }
+        .dark-mode header nav .mobile-menu {
+            background-color: transparent;
+        }
+        main {
+            padding: 1rem;
+        }
+        main .search_gifo_section .search-gifo-title {
+            max-width: 37.44rem;
+            margin: 0 auto;
+        }
+        main .search_gifo_section .search-gifo-title .break-line {
+            display: none;
+        }
+        main .search_gifo_section .search-gifo-img {
+            width: 24.94rem;
+            margin-top: 1.5rem;
+        }
+        main .search_gifo_section .search-container {
+            width: 35.45rem;
+            margin: 0 auto;
+        }
+        main .search_gifo_section .trending-results-words {
+            width: 30%;
+        }
+        main .searched-gifos-section .area,
+        main .favorites-section .area,
+        main .myGifos-section .myGifos-area {
+            grid-template-columns: repeat(auto-fit, 23%);
+            margin-top: 2.25rem;
+        }
+        main .myGifos-section .myGifos-area .trending-gifo {
+            width: 16.25rem;
+            height: 12.25rem;
+        }
+        .zoom-container {
+            width: 53.38%;
+        }
+    }
+    
+    @media(min-width:900px) {
+        header nav .mobile-menu {
+            padding: 0;
+            background-color: inherit;
+        }
+        header nav .mobile-menu .mobile-menu-item:hover {
+            border-bottom: 2px solid #5ed7c6;
+        }
+        header nav .mobile-menu .mobile-menu-item:last-child {
+            margin-right: 0;
+            display: block;
+        }
+        header nav .mobile-menu .mobile-menu-item:last-child:hover {
+            border-bottom: none;
+        }
+        header nav .mobile-menu .mobile-menu-item a:active {
+            color: #9cafc3;
+        }
+        main .search_gifo_section {
+            padding: 1rem 1.5rem 5.938rem 1.5rem;
+        }
+        main .search_gifo_section .search-gifo-title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 2.18rem;
+            line-height: 3.13rem;
+            text-align: center;
+            margin-bottom: 1.765%;
+        }
+        main .search_gifo_section .trending-title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 1.13rem;
+            line-height: 1.56rem;
+            text-align: center;
+        }
+        main .searched-gifos-section .searched-gifos-title,
+        main .favorites-section .favorites-title,
+        main .myGifos-section .section_title,
+        main .trending-gifos-section .trending-gifos-title {
+            font-size: 1.56rem;
+            margin: 4.927% 1.103% 0.883% 1.103%;
+        }
+        main .searched-gifos-section .view-more-btn:hover,
+        .view-more-btn:hover {
+            background-color: #572ee5;
+            color: #ffffff;
+        }
+        main .trending-gifos-section .trending-slider-container .trending-slider-prev-btn,
+        main .trending-gifos-section .trending-slider-container .trending-slider-next-btn {
+            display: block;
+        }
+        main .trending-gifos-section .description {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 1.13rem;
+            line-height: 1.44rem;
+            margin-bottom: 3.9%;
+        }
+        main .trending-gifos-section .trending-slider-container .trending-gifos-box {
+            width: 84.8%;
+            height: 17.19rem;
+        }
+        main .trending-gifos-section .trending-slider-container .trending-gifos-box .trending-gifos-content {
+            width: 129.6rem;
+            height: 17.19rem;
+        }
+        main .trending-gifos-section .trending-slider-container .trending-gifos-box .trending-gifos-content .trending-gifo {
+            width: 22.313rem;
+            height: 100%;
+        }
+        main .searched-gifos-section .area,
+        main .favorites-section .area,
+        main .myGifos-section .area {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 23%);
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2.88rem;
+        }
+        main .trending-gifos-section .trending-slider-container {
+            margin-bottom: 13.383%;
+        }
+        .trending-gifos-box .trending-gifo img {
+            width: 22.313rem;
+            height: 100%;
+        }
+        .trending-hover-container:hover {
+            opacity: 0.6;
+        }
+        .trending-words-link {
+            font-size: 16px;
+            width: max-content;
+        }
+        main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .newGifo-title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 1.56rem;
+            line-height: 1.88rem;
+            text-align: center;
+            margin: 15px;
+        }
+        main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .text {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 1.13rem;
+            line-height: 1.44rem;
+        }
+        .newGifo-section .controls-container .controls .upload-container .upload-btn:hover {
+            background-color: #572ee5;
+            color: #ffffff;
+        }
+        .trending-gifo {
+            width: 12.75rem;
+            height: 12.5rem;
+        }
+        .trending-gifo-img,
+        .trending-gifo img {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+        }
+        .footer .netwoks-container {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 23%;
+            padding: 0;
+        }
+        .footer .netwoks-container .networks-text,
+        .footer .networks-text {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 0.88rem;
+            line-height: 1.25rem;
+        }
+        .footer .netwoks-container .networks-logo-container {
+            width: 50%;
+            margin: 0;
+        }
+        .footer .netwoks-container .networks-logo-container a i {
+            margin: 0 0.5rem;
+        }
+        .footer .netwoks-container .networks-logo-container a i:hover {
+            color: #572ee5;
+        }
+    }
+    
+    @media(min-width:1100px) {
+        header {
+            padding: 1.5rem 9.75rem;
+        }
+        .footer {
+            padding: 2.8rem 9.75rem;
+        }
+        main .searched-gifos-section .area,
+        main .favorites-section .area,
+        main .myGifos-section .area {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 20%);
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2.88rem;
+        }
+        .trending-gifo {
+            width: 16.25rem;
+            height: 12.5rem;
+        }
+    }
+    
+    @media(max-width:500px) {
+        main .newGifo-section {
+            padding: 0;
+        }
+        main .newGifo-section .newGifo-layout {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        main .newGifo-section .newGifo-layout .camera {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 16%;
+            margin-left: 7%;
+        }
+        main .newGifo-section .controls-container .controls {
+            width: 100%;
+        }
+        main .newGifo-section .newGifo-layout .camera .cam,
+        main .newGifo-section .newGifo-layout .camera .path {
+            width: 2rem;
+        }
+        main .newGifo-section .newGifo-layout .newGifo-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 24rem;
+            height: 33vh;
+            border: 1px solid #572ee5;
+            padding: 0;
+            position: relative;
+            margin-bottom: 0;
+        }
+        main .newGifo-section .controls-container .controls .upload-btns {
+            width: 8rem;
+        }
+        main .newGifo-section .controls-container .controls .upload-btns .each {
+            font-size: 0.8rem;
+        }
+        main .newGifo-section .controls-container .reel {
+            width: 12%;
+            margin-left: 1%;
+        }
+        main .newGifo-section .controls-container img {
+            width: 2.88rem;
+        }
+        main .newGifo-section .controls-container .controls .upload-btn {
+            font-size: 0.60rem;
+        }
+        main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+            height: 8rem;
+        }
+        main .newGifo-section .newGifo-layout .newGifo-container .upload-gifo .newGifo-title {
+            font-size: 10px;
+        }
+        #uploadText {
+            display: none;
+        }
+        main .newGifo-section .controls-container .controls .counter .counter-text {
+            position: inherit;
+            font-size: 0.6rem;
+            width: max-content;
+            right: inherit;
+        }
+        main .newGifo-section .controls-container .controls .counter {
+            top: 0;
+            right: 33%;
+        }
+        .recorded-gifo {
+            width: auto;
+            height: inherit;
+        }
+    }
