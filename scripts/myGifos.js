@@ -24,14 +24,16 @@ const trashImg = "./assets/icon-trash-hover.svg";
 let myGifosArray = [];
 let myGifosString = localStorage.getItem("myGifos");
 const eraseGifo = "erase";
+const viewMoreBtnMyGifos = document.getElementById("viewMoreBtnMyGifos");
 let recorder;
 let blob;
 let dateStarted;
 let form = new FormData();
+let clicksCounter = 0;
 
 myGifosLink.addEventListener("click", (e) => {
     e.preventDefault();
-    scrollStep();
+    // scrollStep();
     searhGifoSection.style.display = 'none';
     searchedGifosSection.classList.add("hidden");
     favoritesSection.classList.add("hidden");
@@ -43,7 +45,7 @@ myGifosLink.addEventListener("click", (e) => {
 
 createGifoLink.addEventListener("click", (e) => {
     e.preventDefault();
-    scrollStep();
+    // scrollStep();
     searhGifoSection.style.display = 'none';
     searchedGifosSection.classList.add("hidden");
     favoritesSection.classList.add("hidden");
@@ -57,15 +59,53 @@ renderMyGifos();
 
 function renderMyGifos() {
     myGifos.innerHTML = "";
+    myGifosArray = JSON.parse(myGifosString);
     if (myGifosString == null || myGifosString == "[]") {
         myGifos.classList.remove("area");
         noResults(myGifosIcon, myGifos, "¡Animate a crear tu primer GIFO!");
-    } else {
-        myGifosArray = JSON.parse(myGifosString);
+    } else if (myGifosArray.length <= 12) {
+        viewMoreBtnMyGifos.style.display = "none"
         let urlMyGifos = `https://api.giphy.com/v1/gifs?ids=${myGifosArray.toString()}&api_key=${api_key}`;
         getSectionsData(urlMyGifos, myGifos, trashImg, eraseGifo, eraseGifo);
+    } else {
+        viewMoreBtnMyGifos.style.display = "inline-block"
+        for (let i = 0; i < 12; i++) {
+            let urlMyGifos = `https://api.giphy.com/v1/gifs?ids=${myGifosArray[i].toString()}&api_key=${api_key}`;
+            getSectionsData(urlMyGifos, myGifos, trashImg, eraseGifo, eraseGifo);
+
+        }
+
+
     }
 }
+
+viewMoreBtnMyGifos.addEventListener("click", (e) => {
+    e.preventDefault();
+    // scrollStep();
+    clicksCounter++
+    let iValue = clicksCounter * 12;
+    let arrayLength = iValue * 2
+    let rest = myGifosArray.length - iValue
+
+    console.log('iValue=>', iValue);
+    console.log('arrayLength=>', arrayLength);
+    console.log('rest=>', rest);
+
+    for (let i = iValue; i < arrayLength; i++) {
+        if (rest >= 12) {
+            let urlMyGifos = `https://api.giphy.com/v1/gifs?ids=${myGifosArray[i].toString()}&api_key=${api_key}`;
+            getSectionsData(urlMyGifos, myGifos, trashImg, eraseGifo, eraseGifo);
+        } else {
+            let urlMyGifos = `https://api.giphy.com/v1/gifs?ids=${myGifosArray[i].toString()}&api_key=${api_key}`;
+            getSectionsData(urlMyGifos, myGifos, trashImg, eraseGifo, eraseGifo);
+            viewMoreBtnMyGifos.style.display = "none"
+        }
+    }
+})
+
+
+
+/** === PROCESO DE GRABACIÓN Y SUBIDA === **/
 
 beginBtn.addEventListener("click", getStreamAndRecord);
 

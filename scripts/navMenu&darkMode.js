@@ -4,7 +4,8 @@ const getModeElement = {
     ppalLogo: document.getElementById('ppalLogo'),
     linkMode: document.getElementById('linkMode'),
     createGifoLogo: document.getElementById('createGifoLogo'),
-
+    camera: document.getElementById('camera'),
+    reel: document.getElementById('reel')
 }
 
 const getMenuElement = {
@@ -16,9 +17,17 @@ const getMenuElement = {
     myGifosLink: document.getElementById('myGifosLink'),
     createLink: document.getElementById('createLink'),
     createGifText: document.getElementById('createGifText'),
+    ppalLogo: document.getElementById('ppalLogo'),
 }
 
 /*==== Menu ====*/
+
+// history.scrollRestoration = 'manual';
+
+// getMenuElement.ppalLogo.addEventListener('click', () => {
+//     scrollStep();
+// })
+
 getMenuElement.burguerBtn.addEventListener('click', () => {
     getMenuElement.burguerImg.classList.toggle('fa-bars');
     getMenuElement.burguerImg.classList.toggle('fa-times');
@@ -61,9 +70,13 @@ getModeElement.modeSelect.addEventListener('click', (ev) => {
         (getModeElement.body.classList.add("dark-mode"),
             getModeElement.createGifoLogo.src = "./assets/CTA-crear-gifo-modo-noc.svg",
             getModeElement.ppalLogo.src = "./assets/Logo-modo-noc.svg",
-            getModeElement.linkMode.textContent = "Modo Diurno") :
+            getModeElement.linkMode.textContent = "Modo Diurno",
+            getModeElement.camera.src = "./assets/camara-modo-noc.svg",
+            getModeElement.reel.src = "./assets/pelicula-modo-noc.svg") :
         (getModeElement.body.classList.remove("dark-mode"),
             getModeElement.createGifoLogo.src = "./assets/button-crear-gifo.svg",
             getModeElement.ppalLogo.src = "./assets/logo-mobile.svg",
+            getModeElement.camera.src = "./assets/camara.svg",
+            getModeElement.reel.src = "./assets/pelicula.svg",
             getModeElement.linkMode.textContent = "Modo Nocturno")
 });

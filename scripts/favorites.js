@@ -22,7 +22,7 @@ function addFavorite(gifoId) {
     iconFav.setAttribute('src', fav_act_img)
     addFav(gifoId);
     renderFavorites();
-    scrollStep();
+    // scrollStep();
 }
 
 function addFav(gifo) {
@@ -44,36 +44,36 @@ function renderFavorites() {
         viewMoreBtnFav.style.display = "none"
         fav_gifos.classList.remove("area");
         noResults(fav_icon, fav_gifos, "Guarda tu primer GIFO en favoritos para que se muestre aquí");
-    } else if (favoriteArray.length <= 12) {
-        viewMoreBtnFav.style.display = "none"
+    } else if (favoriteArray.length < 12) {
+
         for (let i = 0; i < 12; i++) {
+            viewMoreBtnFav.style.display = "none"
             let urlFavorites = `https://api.giphy.com/v1/gifs?ids=${favoriteArray[i].toString()}&api_key=${'aSkPUTk4nUZBfbcftWwsvZfRvXgqoYAE'}`;
             getSectionsData(urlFavorites, fav_gifos, fav_act_img, fav_remove, fav);
         }
-    } else if (favoriteArray.length > 12) {
+    } else if (favoriteArray.length >= 12) {
         viewMoreBtnFav.style.display = "inline-block"
         for (let i = 0; i < 12; i++) {
             let urlFavorites = `https://api.giphy.com/v1/gifs?ids=${favoriteArray[i].toString()}&api_key=${'aSkPUTk4nUZBfbcftWwsvZfRvXgqoYAE'}`;
             getSectionsData(urlFavorites, fav_gifos, fav_act_img, fav_remove, fav);
-
         }
-
     }
 }
 
 viewMoreBtnFav.addEventListener("click", (e) => {
     e.preventDefault();
-    scrollStep();
     cantidadClicks++
     let iValue = cantidadClicks * 12;
     let arrayLength = iValue * 2
-    let rest = favoriteArray.length - iValue
+    let rest = favoriteArray.length - arrayLength
     for (let i = iValue; i < arrayLength; i++) {
-        if (rest >= 12) {
+        if (rest <= 0) {
             let urlFavorites = `https://api.giphy.com/v1/gifs?ids=${favoriteArray[i].toString()}&api_key=${'aSkPUTk4nUZBfbcftWwsvZfRvXgqoYAE'}`;
             getSectionsData(urlFavorites, fav_gifos, fav_act_img, fav_remove, fav);
-        } else {
             viewMoreBtnFav.style.display = "none"
+        } else {
+            let urlFavorites = `https://api.giphy.com/v1/gifs?ids=${favoriteArray[i].toString()}&api_key=${'aSkPUTk4nUZBfbcftWwsvZfRvXgqoYAE'}`;
+            getSectionsData(urlFavorites, fav_gifos, fav_act_img, fav_remove, fav);
         }
     }
 })

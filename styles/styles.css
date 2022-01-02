@@ -752,6 +752,12 @@
         color: #572ee5;
     }
     
+    main .newGifo-section .controls-container .controls .upload-btns .step-now {
+        background-color: #572ee5;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+    }
+    
     main .newGifo-section .controls-container .controls .counter {
         position: absolute;
         top: 15%;
@@ -1005,7 +1011,12 @@
         color: #ffffff;
     }
     
-    .dark-mode main .newGifo-section .controls-container .controls .upload-container .upload-btn {
+    .dark-mode main .newGifo-section .controls-container .controls .upload-btns .step-now {
+        background-color: #ffffff;
+        color: #37383c;
+    }
+    
+    .dark-mode main .newGifo-section .controls-container .controls .upload-btn {
         border-color: #ffffff;
         color: #ffffff;
     }
