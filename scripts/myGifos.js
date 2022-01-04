@@ -33,7 +33,6 @@ let clicksCounter = 0;
 
 myGifosLink.addEventListener("click", (e) => {
     e.preventDefault();
-    // scrollStep();
     searhGifoSection.style.display = 'none';
     searchedGifosSection.classList.add("hidden");
     favoritesSection.classList.add("hidden");
@@ -45,7 +44,6 @@ myGifosLink.addEventListener("click", (e) => {
 
 createGifoLink.addEventListener("click", (e) => {
     e.preventDefault();
-    // scrollStep();
     searhGifoSection.style.display = 'none';
     searchedGifosSection.classList.add("hidden");
     favoritesSection.classList.add("hidden");
@@ -61,6 +59,7 @@ function renderMyGifos() {
     myGifos.innerHTML = "";
     myGifosArray = JSON.parse(myGifosString);
     if (myGifosString == null || myGifosString == "[]") {
+        viewMoreBtnMyGifos.style.display = "none"
         myGifos.classList.remove("area");
         noResults(myGifosIcon, myGifos, "¡Animate a crear tu primer GIFO!");
     } else if (myGifosArray.length <= 12) {
@@ -72,25 +71,16 @@ function renderMyGifos() {
         for (let i = 0; i < 12; i++) {
             let urlMyGifos = `https://api.giphy.com/v1/gifs?ids=${myGifosArray[i].toString()}&api_key=${api_key}`;
             getSectionsData(urlMyGifos, myGifos, trashImg, eraseGifo, eraseGifo);
-
         }
-
-
     }
-}
+};
 
 viewMoreBtnMyGifos.addEventListener("click", (e) => {
     e.preventDefault();
-    // scrollStep();
     clicksCounter++
     let iValue = clicksCounter * 12;
     let arrayLength = iValue * 2
     let rest = myGifosArray.length - iValue
-
-    console.log('iValue=>', iValue);
-    console.log('arrayLength=>', arrayLength);
-    console.log('rest=>', rest);
-
     for (let i = iValue; i < arrayLength; i++) {
         if (rest >= 12) {
             let urlMyGifos = `https://api.giphy.com/v1/gifs?ids=${myGifosArray[i].toString()}&api_key=${api_key}`;
@@ -102,8 +92,6 @@ viewMoreBtnMyGifos.addEventListener("click", (e) => {
         }
     }
 })
-
-
 
 /** === PROCESO DE GRABACIÓN Y SUBIDA === **/
 
@@ -268,24 +256,6 @@ async function downloadMyGifo(gifoImg) {
     ).then((img) => img.blob());
     invokeSaveAsDialog(blob, "myGifo.gif");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function erase(gifo) {
-//     let Array;
-// }
 
 /** === ELIMINAR GIFO === */
 function erase(gifo) {

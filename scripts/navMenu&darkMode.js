@@ -22,12 +22,6 @@ const getMenuElement = {
 
 /*==== Menu ====*/
 
-// history.scrollRestoration = 'manual';
-
-// getMenuElement.ppalLogo.addEventListener('click', () => {
-//     scrollStep();
-// })
-
 getMenuElement.burguerBtn.addEventListener('click', () => {
     getMenuElement.burguerImg.classList.toggle('fa-bars');
     getMenuElement.burguerImg.classList.toggle('fa-times');

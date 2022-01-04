@@ -51,7 +51,6 @@ function renderTrendingGifos(arrayGifos, container, favButton, favFunction, type
     }
 };
 
-
 /*=== Slider Desktop ===*/
 
 trendingElements.prevBtn.addEventListener("click", (e) => {

@@ -1,15 +1,16 @@
 let fav_gifos = document.getElementById("favoritesGifosResults");
 const fav_link = document.getElementById("fav_link");
+const afavLink = document.getElementById("aFavLink")
 const fav_icon = "./assets/icon-fav-sin-contenido.svg";
 const fav_act_img = "./assets/icon-fav-active.svg";
 const fav_remove = "removeFav";
 const fav = "fav";
-const favoritesSection = document.getElementById("favoritesSection"); //favorites
-const searhGifoSection = document.getElementById("searhGifoSection"); //hero
-const searchedGifosSection = document.getElementById("searchedGifosSection"); //results
-const create = document.getElementById("create"); //create (cambiar nombre)
-const myGifosLink = document.getElementById("myGifosLink"); //my_gifos_link
-const myGifos = document.getElementById("myGifos"); //my_gifos
+const favoritesSection = document.getElementById("favoritesSection");
+const searhGifoSection = document.getElementById("searhGifoSection");
+const searchedGifosSection = document.getElementById("searchedGifosSection");
+const create = document.getElementById("create");
+const myGifosLink = document.getElementById("myGifosLink");
+const myGifos = document.getElementById("myGifos");
 const viewMoreBtnFav = document.getElementById("viewMoreBtnFav");
 let favoriteArray = [];
 let favoriteString = localStorage.getItem("favoriteGifos");
@@ -22,7 +23,6 @@ function addFavorite(gifoId) {
     iconFav.setAttribute('src', fav_act_img)
     addFav(gifoId);
     renderFavorites();
-    // scrollStep();
 }
 
 function addFav(gifo) {
@@ -43,9 +43,8 @@ function renderFavorites() {
     if (favoriteString == null || favoriteString == "[]") {
         viewMoreBtnFav.style.display = "none"
         fav_gifos.classList.remove("area");
-        noResults(fav_icon, fav_gifos, "Guarda tu primer GIFO en favoritos para que se muestre aquí");
+        noResults(fav_icon, fav_gifos, `"¡Guarda tu primer GIFO en favoritos para que se muestre aquí!"`);
     } else if (favoriteArray.length < 12) {
-
         for (let i = 0; i < 12; i++) {
             viewMoreBtnFav.style.display = "none"
             let urlFavorites = `https://api.giphy.com/v1/gifs?ids=${favoriteArray[i].toString()}&api_key=${'aSkPUTk4nUZBfbcftWwsvZfRvXgqoYAE'}`;

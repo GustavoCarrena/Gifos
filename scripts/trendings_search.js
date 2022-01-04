@@ -19,8 +19,6 @@ const getTSearchElements = {
     viewMoreBtn: document.getElementById('viewMoreBtn'),
 }
 
-/*=== FUNCIONES GENERALES ===*/
-
 function searchGifos() {
     getTSearchElements.searchedGifosResults.innerHTML = "";
     sValue = getTSearchElements.searchInput.value.trim();
@@ -121,14 +119,14 @@ async function trendingTopics() {
             <p class="trending-words-link">${topics[0]}</p>, 
             <p class="trending-words-link">${topics[1]}</p>, 
             <p class="trending-words-link">${topics[2]}</p>, 
-            <p class="trending-words-link">${topics[3]}</p>
+            <p class="trending-words-link">${topics[3]}</p>,
+            <p class="trending-words-link">${topics[4]}</p>
             `;
         const tlinks = document.getElementsByClassName("trending-words-link");
         for (let i = 0; i < tlinks.length; i++) {
             tlinks[i].addEventListener("click", function() {
                 getTSearchElements.searchInput.value = topics[i];
                 searchGifos();
-
             });
         }
     } catch (err) {
