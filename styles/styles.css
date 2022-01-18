@@ -126,7 +126,7 @@
     }
     
     header nav .mobile-menu .mobile-menu-item .create-gif-logo:hover {
-        content: url('/assets/CTA-crear-gifo-hover.svg');
+        content: url('./../assets/CTA-crear-gifo-hover.svg');
     }
     
     main .search_gifo_section {
@@ -968,7 +968,7 @@
     }
     
     .dark-mode header nav .mobile-menu .mobile-menu-item .create-gif-logo:hover {
-        content: url('/assets/CTA-crear-gifo-hover-modo-noc.svg');
+        content: url('./../assets/CTA-crear-gifo-hover-modo-noc.svg');
     }
     
     .dark-mode header nav .mobile-menu .mobile-menu-item a,
